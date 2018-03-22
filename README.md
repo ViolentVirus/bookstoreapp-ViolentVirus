@@ -1,9 +1,14 @@
 # PlayTemplate
 
 ## Install Play Framework
+How to install the Play Framework (SBT and Scala JetBrains plugin) on our classroom computers.
+```
 $ sudo robuntu-install -list
-confirm which app number "Play Framework" is
+```
+Confirm which app number "Play Framework" is, then
+```
 $ sudo robuntu-install -app 2
+```
 
 ## Beginning with a template (Beginner)
 I have created a template on GitHub that has everyting we need to get going. Follow the steps.
