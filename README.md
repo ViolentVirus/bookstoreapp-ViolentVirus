@@ -56,9 +56,8 @@ $ sbt new playframework/play-java-seed.g8
     - At this point we can leave the server running, make changes to our app, then reload the browser.
 
 ## Working from home
-### First-time setup
-Assuming you have IntelliJ
-1. Download and install the IntelliJ scala plugin.
+### Install IntelliJ Scala Plugin
+Assuming you have IntelliJ already, download and install the IntelliJ scala plugin.
     - Check out [How to install Scala plugin for IntelliJ
 ](https://stackoverflow.com/questions/38973049/how-to-install-scala-plugin-for-intellij)
 
