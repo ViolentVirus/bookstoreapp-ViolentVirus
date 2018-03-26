@@ -56,7 +56,27 @@ $ sbt new playframework/play-java-seed.g8
     - At this point we can leave the server running, make changes to our app, then reload the browser.
 
 ## Working from home
+### First-time setup
 Assuming you have IntelliJ
 1. Download and install the IntelliJ scala plugin.
     - Check out [How to install Scala plugin for IntelliJ
 ](https://stackoverflow.com/questions/38973049/how-to-install-scala-plugin-for-intellij)
+
+### Cloning your repo
+- Close any already-open projects.
+    - `File -> Close Project`
+- In the menu, click `Check out from version control -> GitHub`
+    - You may have to log into GitHub here with your GitHub login info.
+- Clone repository
+    - Enter the URL to your GitHub repo you want to set up on your computer
+        - When you are logged in, all your GitHub repos are available in the drodown menu (`Git Repository URL`).
+    - Enter the directory name (usually the same name as the repo)
+    - Press `Clone`
+- Import Project from Gradle
+    - The defaults here should be fine, click `ok`
+- Wait (could take 5 minutes or more)
+
+Once your repo is clones on your computer, you shouldn't have to clone it again. Simply use the `git` command line and `git pull` in any changes you have made.
+
+
+    
