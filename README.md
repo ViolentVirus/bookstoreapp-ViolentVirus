@@ -54,3 +54,9 @@ $ sbt new playframework/play-java-seed.g8
     - Took my computer about 45 seconds the first time.
 4. When the above step is complete, your browser should see a webpage that says "Welcome to Play!"
     - At this point we can leave the server running, make changes to our app, then reload the browser.
+
+## Working from home
+Assuming you have IntelliJ
+1. Download and install the IntelliJ scala plugin.
+    - Check out [How to install Scala plugin for IntelliJ
+](https://stackoverflow.com/questions/38973049/how-to-install-scala-plugin-for-intellij)
