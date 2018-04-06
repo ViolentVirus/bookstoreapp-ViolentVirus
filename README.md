@@ -1,15 +1,13 @@
 # PlayTemplate
 
-## Install Play Framework
-How to install the Play Framework (SBT and Scala JetBrains plugin) on our classroom computers.
-```
-$ robuntu-install -list
-```
-Confirm which app number "Play Framework" is, then
-```
-$ robuntu-install -app 2
-```
-
+## Install Scala IntelliJ Plugin
+1. Open IntelliJ.
+2. Go to `Configure -> Plugins`.
+3. Search for `sbt`.
+    - If it doesnt show, click `Search in repositories`.
+4. Click on the `Scala` plugin and click `Install`.
+5. Once it is done, you will have to restart IntelliJ.
+    
 ## Beginning with a template (Beginner)
 I have created a template on GitHub that has everyting we need to get going. Follow the steps.
 
@@ -56,10 +54,8 @@ $ sbt new playframework/play-java-seed.g8
     - At this point we can leave the server running, make changes to our app, then reload the browser.
 
 ## Working from home
-### Install IntelliJ Scala Plugin
-Assuming you have IntelliJ already, download and install the IntelliJ scala plugin.
-    - Check out [How to install Scala plugin for IntelliJ
-](https://stackoverflow.com/questions/38973049/how-to-install-scala-plugin-for-intellij)
+### Create new project
+If creating a new project, follow the above instrictions under **Beginning with a template (Beginner)** and then **Import into IntelliJ**. If you have a GitHub repo already established, see below.
 
 ### Cloning your repo
 - Close any already-open projects.
