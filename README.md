@@ -1,5 +1,24 @@
 # PlayTemplate
 
+## Install sbt on our Chromebooks
+In the linux terminal from our classroom computers, type:
+```
+$ robuntu-install -app 2
+```
+
+## Install sbt on any Linux system
+From the terminal type:
+```
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+sudo apt-get update
+sudo apt-get install sbt
+```
+
+## Install sbt on Windows
+[Download sbt here](https://www.scala-sbt.org/download.html).
+Then follow the install instructions.
+
 ## Install Scala IntelliJ Plugin
 1. Open IntelliJ.
 2. Go to `Configure -> Plugins`.
