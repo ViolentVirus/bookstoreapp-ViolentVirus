@@ -16,7 +16,7 @@ I have created a template on GitHub that has everyting we need to get going. Fol
 ```
 $ cd <your-directory>
 $ wget https://github.com/MrGallo/PlayTemplate/archive/master.zip
-$ unzip PlayTemplate-master.zip
+$ unzip master.zip
 $ mv PlayTemplate-master <NameOfApp>
 ```
 
