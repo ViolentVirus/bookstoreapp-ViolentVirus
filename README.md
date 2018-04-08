@@ -112,6 +112,7 @@ Place the key that was generated for **your app** into your `conf/application.co
 
 play.http.secret.key="secretKeyHere"
 ```
+This is technically not the most secure way to do this, but, for our purposes, it is simple and will allow our app to be published quicker. If you ever need to make a serious app with actual people using it, check out Play Framework's [Application Secret](https://www.playframework.com/documentation/2.6.x/ApplicationSecret) page.
 
 #### Install and sign up for Heroku
 
