@@ -99,9 +99,14 @@ Once your repo is clones on your computer, you shouldn't have to clone it again.
 To run in production mode, you need to [set the application secret](https://www.playframework.com/documentation/2.6.x/ApplicationSecret).
 ```
 sbt playGenerateSecret
+...
+[info] Loading settings from build.sbt ...
+[info] Set current project to BookStoreApp (in build file:/C:/Users/danga/Documents/GitHub/BookStoreApp/)
+[info] Generated new secret: RGlBtp4>722S_uumQ5r7=RbA[=PGkC<`/Zr9sy3pPTmP?uH;84:ilRwMNKRS:GnZ
+[success] Total time: 0 s, completed Apr 8, 2018 2:11:16 PM
 ```
-This will give you a key you can use to place into your `conf/application.conf` file.
-Add the following to that file, using the secret key that was generated for you.
+As you can see, the key that generated for me was ``RGlBtp4>722S_uumQ5r7=RbA[=PGkC<`/Zr9sy3pPTmP?uH;84:ilRwMNKRS:GnZ``.
+Place the key that was generated for **your app** into your `conf/application.conf` file.
 ```
 # conf/application.conf
 
