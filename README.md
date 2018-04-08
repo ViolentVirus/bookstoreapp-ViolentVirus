@@ -92,5 +92,67 @@ If creating a new project, follow the above instrictions under **Beginning with 
 
 Once your repo is clones on your computer, you shouldn't have to clone it again. Simply use the `git` command line and `git pull` in any changes you have made.
 
+### Hosting App on the Web
+**#TODO: Clean up instructions**
 
-    
+#### Application secret
+To run in production mode, you need to [set the application secret](https://www.playframework.com/documentation/2.6.x/ApplicationSecret).
+```
+sbt playGenerateSecret
+```
+This will give you a key you can use to place into your `conf/application.conf` file.
+Add the following to that file, using the secret key that was generated for you.
+```
+# conf/application.conf
+
+play.http.secret.key="secretKeyHere"
+```
+
+#### Install and sign up for Heroku
+
+Heroku is a hosting service on the cloud. 
+Follow the instructions to set up an account and finally create a Heroku app to push your Play app to.
+
+*[PlayFramework.com - Deploying to Heroku](https://www.playframework.com/documentation/2.6.x/ProductionHeroku#Deploying-to-Heroku)*
+1. Install Heroku toolbelt
+2. Sign up for Heroku
+
+#### Init Project Git
+If you don't have a git repository initialized type in the following in your App directory.
+```
+$ git init
+$ git add .
+$ git commit -m "init"
+```
+
+#### Create Heroku App
+The Heroku app is just a container on the cloud to store your Play app. 
+The container for your app needs to be created on the Heroku servers.
+Use the following to create the Heroku app. 
+
+In your app directory, type in the below.
+Change `myapp` to whatever you want your app to be named.
+```
+$ heroku create myapp --buildpack heroku/scala
+```
+
+#### Add Heroku to Allowed Hosts
+We need to update `conf/application.conf` to allow Play Framework to run our app on Heroku's server.
+Change `myapp` to the app name specified when you used `$ heroku create` just above.
+```
+# conf/application.conf
+
+play.filters.hosts {
+  # Allow requests to example.com, its subdomains, and localhost:9000.
+  allowed = ["myapp.herokuapp.com", "localhost:9000"]
+}
+```
+
+#### Commit and Push
+With those changes, we need to commit and push to Heroku. 
+Repeat this step every time you make a change to your app and send it to Heroku.
+```
+$ git add -A
+$ git commit -m "Some descriptive commit message"
+$ git push heroku master
+```
