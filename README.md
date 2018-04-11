@@ -92,7 +92,7 @@ If creating a new project, follow the above instrictions under **Beginning with 
 
 Once your repo is clones on your computer, you shouldn't have to clone it again. Simply use the `git` command line and `git pull` in any changes you have made.
 
-### Hosting App on the Web
+# Hosting App on the Web
 **#TODO: Clean up instructions**
 
 #### Install and sign up for Heroku
