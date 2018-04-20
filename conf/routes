@@ -11,7 +11,9 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /welcome/:name/:lastName                      controllers.HomeController.welcome(name: String, lastName: String)
 
 GET     /books                                        controllers.BooksController.index
+GET     /books/create                                 controllers.BooksController.create()
 GET     /books/:id                                    controllers.BooksController.show(id: Integer)
 GET     /books/edit/:id                               controllers.BooksController.edit(id: Integer)
 POST    /books/edit                                   controllers.BooksController.update()
-GET     /books/create                                 controllers.BooksController.create()
+POST    /books/create                                 controllers.BooksController.save()
+GET     /books/delete/:id                             controllers.BooksController.destroy(id: Integer)
