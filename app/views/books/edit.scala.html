@@ -8,10 +8,10 @@
     <body>
         <h1>Edit Book</h1>
         @helper.form(action = routes.BooksController.update()){
-            @helper.inputText(bookFrom("id"))
-            @helper.inputText(bookFrom("title"))
-            @helper.inputText(bookFrom("price"))
-            @helper.inputText(bookFrom("author"))
+            @helper.inputText(bookForm("id"))
+            @helper.inputText(bookForm("title"))
+            @helper.inputText(bookForm("price"))
+            @helper.inputText(bookForm("author"))
 
             <input type="submit" value="Edit Book">
         }

@@ -4,7 +4,6 @@ import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.index;
 import views.html.books.*;
 
 import javax.inject.Inject;
@@ -49,7 +48,7 @@ public class BooksController  extends Controller{
 
     public Result update(){
         Book book = formFactory.form(Book.class).bindFromRequest().get();
-        Book oldBook = Book.findById(Book.ir);
+        Book oldBook = Book.findById(book.id);
         if(oldBook ==null){
             return notFound("Book Not Found");
         }
@@ -63,7 +62,7 @@ public class BooksController  extends Controller{
 
     public Result destroy(Integer id){
         Book book = Book.findById(id);
-        if(Book ==null){
+        if(book ==null){
             return notFound("Book Not Found");
         }
 
@@ -73,7 +72,7 @@ public class BooksController  extends Controller{
 
     public Result show(Integer id){
         Book book = Book.findById(id);
-        if(Book ==null){
+        if(book ==null){
             return notFound("Book Not Found");
         }
         return ok(show.render(book));
