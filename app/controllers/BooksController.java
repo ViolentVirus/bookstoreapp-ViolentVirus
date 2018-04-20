@@ -62,7 +62,13 @@ public class BooksController  extends Controller{
     }
 
     public Result destroy(Integer id){
-        return TODO;
+        Book book = Book.findById(id);
+        if(Book ==null){
+            return notFound("Book Not Found");
+        }
+
+        Book.remove(book);
+        return redirect(routes.BooksController.index());
     }
 
     public Result show(Integer id){
